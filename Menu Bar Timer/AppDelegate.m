@@ -7,16 +7,30 @@
 //
 
 #import "AppDelegate.h"
+#import "TimerViewController.h"
 
 @interface AppDelegate ()
 
-@property (weak) IBOutlet NSWindow *window;
+@property (nonatomic, strong) NSStatusItem *statusItem;
+@property (nonatomic, getter=isDarkModeOn) BOOL darkModeOn;
+@property (nonatomic, strong) NSPopover *popover;
+
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    NSStatusItem* statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    [statusItem.button setTitle:@"00:00:00"];
+    statusItem.button.action = @selector(statusItemClicked:);
+
+    self.statusItem = statusItem;
+
+    NSPopover *popover = [[NSPopover alloc] init];
+}
+
+- (void)statusItemClicked:(NSStatusBarButton *)sender {
+    NSLog(@"Clicked me!");
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

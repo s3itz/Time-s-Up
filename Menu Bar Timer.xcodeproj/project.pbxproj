@@ -10,7 +10,8 @@
 		CF70B00C1B9CE4FC0061BF86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF70B00B1B9CE4FC0061BF86 /* AppDelegate.m */; };
 		CF70B00F1B9CE4FC0061BF86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF70B00E1B9CE4FC0061BF86 /* main.m */; };
 		CF70B0111B9CE4FC0061BF86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF70B0101B9CE4FC0061BF86 /* Assets.xcassets */; };
-		CF70B0141B9CE4FC0061BF86 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF70B0121B9CE4FC0061BF86 /* MainMenu.xib */; };
+		CF70B01E1B9CE9090061BF86 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF70B01C1B9CE9090061BF86 /* TimerViewController.m */; settings = {ASSET_TAGS = (); }; };
+		CF70B01F1B9CE9090061BF86 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF70B01D1B9CE9090061BF86 /* TimerViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,8 +20,10 @@
 		CF70B00B1B9CE4FC0061BF86 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CF70B00E1B9CE4FC0061BF86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CF70B0101B9CE4FC0061BF86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CF70B0131B9CE4FC0061BF86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CF70B0151B9CE4FC0061BF86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF70B01B1B9CE9090061BF86 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		CF70B01C1B9CE9090061BF86 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		CF70B01D1B9CE9090061BF86 /* TimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +59,11 @@
 				CF70B00A1B9CE4FC0061BF86 /* AppDelegate.h */,
 				CF70B00B1B9CE4FC0061BF86 /* AppDelegate.m */,
 				CF70B0101B9CE4FC0061BF86 /* Assets.xcassets */,
-				CF70B0121B9CE4FC0061BF86 /* MainMenu.xib */,
 				CF70B0151B9CE4FC0061BF86 /* Info.plist */,
 				CF70B00D1B9CE4FC0061BF86 /* Supporting Files */,
+				CF70B01B1B9CE9090061BF86 /* TimerViewController.h */,
+				CF70B01C1B9CE9090061BF86 /* TimerViewController.m */,
+				CF70B01D1B9CE9090061BF86 /* TimerViewController.xib */,
 			);
 			path = "Menu Bar Timer";
 			sourceTree = "<group>";
@@ -128,8 +133,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF70B01F1B9CE9090061BF86 /* TimerViewController.xib in Resources */,
 				CF70B0111B9CE4FC0061BF86 /* Assets.xcassets in Resources */,
-				CF70B0141B9CE4FC0061BF86 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,23 +145,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF70B01E1B9CE9090061BF86 /* TimerViewController.m in Sources */,
 				CF70B00F1B9CE4FC0061BF86 /* main.m in Sources */,
 				CF70B00C1B9CE4FC0061BF86 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CF70B0121B9CE4FC0061BF86 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF70B0131B9CE4FC0061BF86 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CF70B0161B9CE4FC0061BF86 /* Debug */ = {
