@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A279b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5023"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8187.4"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TimerViewController">
@@ -10,10 +12,172 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="172" height="131"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="Egd-Zs-xbN">
+                    <rect key="frame" x="20" y="49" width="132" height="62"/>
+                    <subviews>
+                        <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYi-ve-ryg">
+                            <rect key="frame" x="20" y="20" width="92" height="22"/>
+                            <subviews>
+                                <textField focusRingType="none" verticalHuggingPriority="750" placeholderIntrinsicWidth="28" placeholderIntrinsicHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xo5-lh-X3F">
+                                    <rect key="frame" x="0.0" y="0.0" width="28" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="28" id="YDF-0v-upa"/>
+                                    </constraints>
+                                    <animations/>
+                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="00" drawsBackground="YES" id="Av7-2i-dIV">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <binding destination="-2" name="value" keyPath="self.hours" id="8Tf-Om-6Qe">
+                                            <dictionary key="options">
+                                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                <string key="NSNullPlaceholder">00</string>
+                                            </dictionary>
+                                        </binding>
+                                        <outlet property="delegate" destination="-2" id="zwb-lB-OoY"/>
+                                    </connections>
+                                </textField>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Z1U-Ep-Y12">
+                                    <rect key="frame" x="26" y="5" width="8" height="17"/>
+                                    <animations/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=":" id="TVp-ej-Ocy">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField focusRingType="none" verticalHuggingPriority="750" placeholderIntrinsicWidth="28" placeholderIntrinsicHeight="22" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="lo8-fR-OSa">
+                                    <rect key="frame" x="32" y="0.0" width="28" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="28" id="qA3-PS-lvg"/>
+                                    </constraints>
+                                    <animations/>
+                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="00" drawsBackground="YES" id="YF0-6R-hPq">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <binding destination="-2" name="value" keyPath="self.minutes" id="nTP-n7-63B">
+                                            <dictionary key="options">
+                                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                <string key="NSNullPlaceholder">00</string>
+                                            </dictionary>
+                                        </binding>
+                                        <outlet property="delegate" destination="-2" id="s7h-Rt-pBI"/>
+                                    </connections>
+                                </textField>
+                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zky-qK-f9E">
+                                    <rect key="frame" x="58" y="5" width="8" height="17"/>
+                                    <animations/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=":" id="vje-FF-gW9">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                </textField>
+                                <textField focusRingType="none" verticalHuggingPriority="750" placeholderIntrinsicWidth="28" placeholderIntrinsicHeight="22" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="QGK-lv-dMQ">
+                                    <rect key="frame" x="64" y="0.0" width="28" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="28" id="fYg-zE-uE4"/>
+                                    </constraints>
+                                    <animations/>
+                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="00" drawsBackground="YES" id="vcL-fd-6Be">
+                                        <font key="font" metaFont="system"/>
+                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    </textFieldCell>
+                                    <connections>
+                                        <binding destination="-2" name="value" keyPath="self.seconds" id="gMI-48-fHt">
+                                            <dictionary key="options">
+                                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
+                                                <string key="NSNullPlaceholder">00</string>
+                                            </dictionary>
+                                        </binding>
+                                        <outlet property="delegate" destination="-2" id="b54-ge-ykW"/>
+                                    </connections>
+                                </textField>
+                            </subviews>
+                            <animations/>
+                            <visibilityPriorities>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                                <integer value="1000"/>
+                            </visibilityPriorities>
+                            <customSpacing>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                                <real value="3.4028234663852886e+38"/>
+                            </customSpacing>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="dYi-ve-ryg" firstAttribute="leading" secondItem="Egd-Zs-xbN" secondAttribute="leading" constant="20" symbolic="YES" id="DSh-aD-eXe"/>
+                        <constraint firstItem="dYi-ve-ryg" firstAttribute="top" secondItem="Egd-Zs-xbN" secondAttribute="top" constant="20" id="KBm-Wi-net"/>
+                    </constraints>
+                    <animations/>
+                </customView>
+                <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dxs-ce-Lx8">
+                    <rect key="frame" x="20" y="20" width="132" height="21"/>
+                    <subviews>
+                        <button horizontalHuggingPriority="249" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Uoq-oK-VCA">
+                            <rect key="frame" x="-6" y="-7" width="73" height="32"/>
+                            <animations/>
+                            <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Skg-ay-ku5">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="startPressed:" target="-2" id="DQV-kP-zjE"/>
+                                <binding destination="-2" name="enabled" keyPath="self.ableToStart" id="ryX-LQ-AHC"/>
+                            </connections>
+                        </button>
+                        <button verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="xA5-vp-neu">
+                            <rect key="frame" x="63" y="-7" width="75" height="32"/>
+                            <animations/>
+                            <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ofw-N9-rsx">
+                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                <font key="font" metaFont="system"/>
+                            </buttonCell>
+                            <connections>
+                                <action selector="resetPressed:" target="-2" id="WO8-6m-b0J"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <visibilityPriorities>
+                        <integer value="1000"/>
+                        <integer value="1000"/>
+                    </visibilityPriorities>
+                    <customSpacing>
+                        <real value="3.4028234663852886e+38"/>
+                        <real value="3.4028234663852886e+38"/>
+                    </customSpacing>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Egd-Zs-xbN" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="2bA-15-0iO"/>
+                <constraint firstAttribute="bottom" secondItem="Dxs-ce-Lx8" secondAttribute="bottom" constant="20" symbolic="YES" id="9mb-Bf-5db"/>
+                <constraint firstItem="Dxs-ce-Lx8" firstAttribute="top" secondItem="Egd-Zs-xbN" secondAttribute="bottom" constant="8" id="B9i-L5-PDc"/>
+                <constraint firstAttribute="trailing" secondItem="Egd-Zs-xbN" secondAttribute="trailing" constant="20" id="WdY-tQ-QrJ"/>
+                <constraint firstItem="Dxs-ce-Lx8" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="hOn-SO-m8J"/>
+                <constraint firstItem="Egd-Zs-xbN" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="lU5-sq-mrf"/>
+                <constraint firstAttribute="trailing" secondItem="Dxs-ce-Lx8" secondAttribute="trailing" constant="20" symbolic="YES" id="oAv-uM-NrU"/>
+            </constraints>
+            <animations/>
+            <point key="canvasLocation" x="259" y="304.5"/>
         </customView>
+        <userDefaultsController representsSharedInstance="YES" id="PLc-nh-eJ9"/>
     </objects>
 </document>

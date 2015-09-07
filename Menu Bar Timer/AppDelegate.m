@@ -12,7 +12,7 @@
 @interface AppDelegate ()
 
 @property (nonatomic, strong) NSStatusItem *statusItem;
-@property (nonatomic, getter=isDarkModeOn) BOOL darkModeOn;
+//@property (nonatomic, getter=isDarkModeOn) BOOL darkModeOn;
 @property (nonatomic, strong) NSPopover *popover;
 
 @end
@@ -22,15 +22,22 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     NSStatusItem* statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusItem.button setTitle:@"00:00:00"];
-    statusItem.button.action = @selector(statusItemClicked:);
+    statusItem.button.action = @selector(togglePopover:);
 
     self.statusItem = statusItem;
 
     NSPopover *popover = [[NSPopover alloc] init];
+    popover.contentViewController = [[TimerViewController alloc] initWithNibName:@"TimerViewController" bundle:nil];
+    self.popover = popover;
 }
 
-- (void)statusItemClicked:(NSStatusBarButton *)sender {
-    NSLog(@"Clicked me!");
+- (void)togglePopover:(NSStatusBarButton *)sender {
+    if (self.popover.isShown) {
+        [self.popover performClose:sender];
+    } else {
+        NSStatusBarButton *button = self.statusItem.button;
+        [self.popover showRelativeToRect:button.bounds ofView:button preferredEdge:NSMinYEdge];
+    }
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
