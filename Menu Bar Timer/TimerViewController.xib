@@ -8,6 +8,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TimerViewController">
             <connections>
+                <outlet property="startPauseButton" destination="Uoq-oK-VCA" id="8hq-n1-CKF"/>
+                <outlet property="timeFieldsView" destination="4vD-MU-AJa" id="Z5o-mB-ZFc"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -17,132 +19,6 @@
             <rect key="frame" x="0.0" y="0.0" width="172" height="131"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <customView translatesAutoresizingMaskIntoConstraints="NO" id="Egd-Zs-xbN">
-                    <rect key="frame" x="20" y="49" width="132" height="62"/>
-                    <subviews>
-                        <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dYi-ve-ryg">
-                            <rect key="frame" x="20" y="20" width="92" height="22"/>
-                            <subviews>
-                                <textField focusRingType="none" verticalHuggingPriority="750" placeholderIntrinsicWidth="28" placeholderIntrinsicHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xo5-lh-X3F">
-                                    <rect key="frame" x="0.0" y="0.0" width="28" height="22"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="28" id="YDF-0v-upa"/>
-                                    </constraints>
-                                    <animations/>
-                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="00" drawsBackground="YES" id="Av7-2i-dIV">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                    <connections>
-                                        <binding destination="-2" name="editable" keyPath="self.countdownTimer" id="9bV-KD-XXx">
-                                            <dictionary key="options">
-                                                <string key="NSValueTransformerName">NSIsNil</string>
-                                            </dictionary>
-                                        </binding>
-                                        <binding destination="-2" name="value" keyPath="self.hours" id="8Tf-Om-6Qe">
-                                            <dictionary key="options">
-                                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
-                                                <string key="NSNullPlaceholder">00</string>
-                                            </dictionary>
-                                        </binding>
-                                        <outlet property="delegate" destination="-2" id="zwb-lB-OoY"/>
-                                    </connections>
-                                </textField>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Z1U-Ep-Y12">
-                                    <rect key="frame" x="26" y="5" width="8" height="17"/>
-                                    <animations/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=":" id="TVp-ej-Ocy">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <textField focusRingType="none" verticalHuggingPriority="750" placeholderIntrinsicWidth="28" placeholderIntrinsicHeight="22" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="lo8-fR-OSa">
-                                    <rect key="frame" x="32" y="0.0" width="28" height="22"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="28" id="qA3-PS-lvg"/>
-                                    </constraints>
-                                    <animations/>
-                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="00" drawsBackground="YES" id="YF0-6R-hPq">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                    <connections>
-                                        <binding destination="-2" name="editable" keyPath="self.countdownTimer" id="esh-81-dgm">
-                                            <dictionary key="options">
-                                                <string key="NSValueTransformerName">NSIsNil</string>
-                                            </dictionary>
-                                        </binding>
-                                        <binding destination="-2" name="value" keyPath="self.minutes" id="nTP-n7-63B">
-                                            <dictionary key="options">
-                                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
-                                                <string key="NSNullPlaceholder">00</string>
-                                            </dictionary>
-                                        </binding>
-                                        <outlet property="delegate" destination="-2" id="s7h-Rt-pBI"/>
-                                    </connections>
-                                </textField>
-                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zky-qK-f9E">
-                                    <rect key="frame" x="58" y="5" width="8" height="17"/>
-                                    <animations/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=":" id="vje-FF-gW9">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                </textField>
-                                <textField focusRingType="none" verticalHuggingPriority="750" placeholderIntrinsicWidth="28" placeholderIntrinsicHeight="22" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="QGK-lv-dMQ">
-                                    <rect key="frame" x="64" y="0.0" width="28" height="22"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="28" id="fYg-zE-uE4"/>
-                                    </constraints>
-                                    <animations/>
-                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="00" drawsBackground="YES" id="vcL-fd-6Be">
-                                        <font key="font" metaFont="system"/>
-                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    </textFieldCell>
-                                    <connections>
-                                        <binding destination="-2" name="editable" keyPath="self.countdownTimer" id="WCE-QS-8NJ">
-                                            <dictionary key="options">
-                                                <string key="NSValueTransformerName">NSIsNil</string>
-                                            </dictionary>
-                                        </binding>
-                                        <binding destination="-2" name="value" keyPath="self.seconds" id="gMI-48-fHt">
-                                            <dictionary key="options">
-                                                <bool key="NSContinuouslyUpdatesValue" value="YES"/>
-                                                <string key="NSNullPlaceholder">00</string>
-                                            </dictionary>
-                                        </binding>
-                                        <outlet property="delegate" destination="-2" id="b54-ge-ykW"/>
-                                    </connections>
-                                </textField>
-                            </subviews>
-                            <animations/>
-                            <visibilityPriorities>
-                                <integer value="1000"/>
-                                <integer value="1000"/>
-                                <integer value="1000"/>
-                                <integer value="1000"/>
-                                <integer value="1000"/>
-                            </visibilityPriorities>
-                            <customSpacing>
-                                <real value="3.4028234663852886e+38"/>
-                                <real value="3.4028234663852886e+38"/>
-                                <real value="3.4028234663852886e+38"/>
-                                <real value="3.4028234663852886e+38"/>
-                                <real value="3.4028234663852886e+38"/>
-                            </customSpacing>
-                        </stackView>
-                    </subviews>
-                    <constraints>
-                        <constraint firstItem="dYi-ve-ryg" firstAttribute="leading" secondItem="Egd-Zs-xbN" secondAttribute="leading" constant="20" symbolic="YES" id="DSh-aD-eXe"/>
-                        <constraint firstItem="dYi-ve-ryg" firstAttribute="top" secondItem="Egd-Zs-xbN" secondAttribute="top" constant="20" id="KBm-Wi-net"/>
-                    </constraints>
-                    <animations/>
-                </customView>
                 <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dxs-ce-Lx8">
                     <rect key="frame" x="20" y="20" width="132" height="21"/>
                     <subviews>
@@ -155,7 +31,7 @@
                             </buttonCell>
                             <connections>
                                 <action selector="startPressed:" target="-2" id="DQV-kP-zjE"/>
-                                <binding destination="-2" name="enabled" keyPath="self.ableToStart" id="ryX-LQ-AHC"/>
+                                <binding destination="-2" name="enabled" keyPath="self.timeFieldsView.valid" id="d1a-ox-B2n"/>
                             </connections>
                         </button>
                         <button verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="xA5-vp-neu">
@@ -167,11 +43,6 @@
                             </buttonCell>
                             <connections>
                                 <action selector="resetPressed:" target="-2" id="WO8-6m-b0J"/>
-                                <binding destination="-2" name="enabled" keyPath="self.countdownTimer" id="rBy-zD-i8t">
-                                    <dictionary key="options">
-                                        <string key="NSValueTransformerName">NSIsNotNil</string>
-                                    </dictionary>
-                                </binding>
                             </connections>
                         </button>
                     </subviews>
@@ -185,14 +56,18 @@
                         <real value="3.4028234663852886e+38"/>
                     </customSpacing>
                 </stackView>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="4vD-MU-AJa" customClass="TimeFieldsView">
+                    <rect key="frame" x="20" y="49" width="132" height="62"/>
+                    <animations/>
+                </customView>
             </subviews>
             <constraints>
-                <constraint firstItem="Egd-Zs-xbN" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="2bA-15-0iO"/>
+                <constraint firstItem="4vD-MU-AJa" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="42i-u7-iAP"/>
+                <constraint firstAttribute="trailing" secondItem="4vD-MU-AJa" secondAttribute="trailing" constant="20" id="4yJ-xH-2Jl"/>
                 <constraint firstAttribute="bottom" secondItem="Dxs-ce-Lx8" secondAttribute="bottom" constant="20" symbolic="YES" id="9mb-Bf-5db"/>
-                <constraint firstItem="Dxs-ce-Lx8" firstAttribute="top" secondItem="Egd-Zs-xbN" secondAttribute="bottom" constant="8" id="B9i-L5-PDc"/>
-                <constraint firstAttribute="trailing" secondItem="Egd-Zs-xbN" secondAttribute="trailing" constant="20" id="WdY-tQ-QrJ"/>
+                <constraint firstItem="Dxs-ce-Lx8" firstAttribute="top" secondItem="4vD-MU-AJa" secondAttribute="bottom" constant="8" id="OvK-De-Wh0"/>
+                <constraint firstItem="4vD-MU-AJa" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="VWZ-RK-Scl"/>
                 <constraint firstItem="Dxs-ce-Lx8" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="hOn-SO-m8J"/>
-                <constraint firstItem="Egd-Zs-xbN" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="lU5-sq-mrf"/>
                 <constraint firstAttribute="trailing" secondItem="Dxs-ce-Lx8" secondAttribute="trailing" constant="20" symbolic="YES" id="oAv-uM-NrU"/>
             </constraints>
             <animations/>
