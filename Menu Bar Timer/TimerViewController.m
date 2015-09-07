@@ -32,13 +32,6 @@
     // Do view setup here.
 }
 
-#pragma mark - Custom Accessors
-
-- (BOOL)isAbleToStart {
-    TimeFieldsView *timeFieldsView = self.timeFieldsView;
-    return timeFieldsView.hours || timeFieldsView.minutes || timeFieldsView.seconds;
-}
-
 #pragma mark - IBActions
 
 - (IBAction)startPressed:(NSButton *)sender {
@@ -78,6 +71,10 @@
 - (IBAction)resetPressed:(NSButton* )sender {
     [self resetTimer];
     [self resetViews];
+}
+
+- (IBAction)pressedQuit:(NSButton *)sender {
+    [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0];
 }
 
 #pragma mark - NSTimer helpers
@@ -124,8 +121,5 @@
 
     self.statusBarButton.title = [self stringFromTimeInterval:remainingTimeInterval];
 }
-
-#pragma mark - Protocol conformance
-#pragma mark - NSTextFieldDelegate
 
 @end

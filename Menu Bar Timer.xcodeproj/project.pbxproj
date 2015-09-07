@@ -63,8 +63,6 @@
 			children = (
 				CF70B00A1B9CE4FC0061BF86 /* AppDelegate.h */,
 				CF70B00B1B9CE4FC0061BF86 /* AppDelegate.m */,
-				CF70B0101B9CE4FC0061BF86 /* Assets.xcassets */,
-				CF70B0151B9CE4FC0061BF86 /* Info.plist */,
 				CF70B00D1B9CE4FC0061BF86 /* Supporting Files */,
 				CF70B01B1B9CE9090061BF86 /* TimerViewController.h */,
 				CF70B01C1B9CE9090061BF86 /* TimerViewController.m */,
@@ -79,6 +77,8 @@
 		CF70B00D1B9CE4FC0061BF86 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CF70B0101B9CE4FC0061BF86 /* Assets.xcassets */,
+				CF70B0151B9CE4FC0061BF86 /* Info.plist */,
 				CF70B00E1B9CE4FC0061BF86 /* main.m */,
 			);
 			name = "Supporting Files";

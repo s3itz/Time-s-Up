@@ -10,6 +10,7 @@
 
 @interface TimerViewController : NSViewController
 
+// Passed when application starts; prevents having to do any data passing
 @property (nonatomic, weak) NSStatusBarButton *statusBarButton;
 
 @end

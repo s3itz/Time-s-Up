@@ -22,15 +22,18 @@
 
 #pragma mark - View lifecycle
 
+- (void)xibSetup {
+    [[NSBundle mainBundle] loadNibNamed:@"TimeFieldsView" owner:self topLevelObjects:nil];
+
+    CGRect contentFrame = NSMakeRect(0, 0, self.frame.size.width, self.frame.size.height);
+    self.view.frame = contentFrame;
+
+    [self addSubview:self.view];
+}
 - (instancetype)initWithFrame:(NSRect)frameRect {
     self = [super initWithFrame:frameRect];
     if (self) {
-        [[NSBundle mainBundle] loadNibNamed:@"TimeFieldsView" owner:self topLevelObjects:nil];
-
-        CGRect contentFrame = NSMakeRect(0, 0, self.frame.size.width, self.frame.size.height);
-        self.view.frame = contentFrame;
-
-        [self addSubview:self.view];
+        [self xibSetup];
     }
     return self;
 }
@@ -38,12 +41,7 @@
 - (instancetype)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
-        [[NSBundle mainBundle] loadNibNamed:@"TimeFieldsView" owner:self topLevelObjects:nil];
-
-        CGRect contentFrame = NSMakeRect(0, 0, self.frame.size.width, self.frame.size.height);
-        self.view.frame = contentFrame;
-
-        [self addSubview:self.view];
+        [self xibSetup];
     }
     return self;
 }
@@ -51,7 +49,6 @@
 #pragma mark - Custom accessor methods
 
 - (int)hours {
-    NSLog(@"%@", self.hoursTextField);
     return self.hoursTextField.intValue;
 }
 
@@ -90,6 +87,10 @@
     return self.hours || self.minutes || self.seconds;
 }
 
++ (NSSet *)keyPathsForValuesAffectingValid {
+    return [NSSet setWithObjects:@"hours", @"minutes", @"seconds", nil];
+}
+
 - (void)setEditable:(BOOL)editable {
     self.hoursTextField.editable = editable;
     self.minutesTextField.editable = editable;
@@ -98,9 +99,8 @@
     _editable = editable;
 }
 
-+ (NSSet *)keyPathsForValuesAffectingValid {
-    return [NSSet setWithObjects:@"hours", @"minutes", @"seconds", nil];
-}
+#pragma mark - Protocol conformance
+#pragma mark - NSTextFieldDelegate
 
 - (void)controlTextDidChange:(NSNotification *)obj {
     static NSCharacterSet *numericSet = nil;
