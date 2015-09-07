@@ -49,8 +49,6 @@
         int minutes = self.timeFieldsView.minutes;
         int seconds = self.timeFieldsView.seconds;
 
-        NSLog(@"%d:%d:%d", hours, minutes, seconds);
-
         self.countdownInterval = hours * 3600 + minutes * 60 + seconds;
 
         NSTimer *timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
@@ -117,8 +115,6 @@
 }
 
 - (void)updateTime:(NSTimer *)timer {
-    NSLog(@"%s", __func__);
-
     NSTimeInterval elapsedTimeInterval = [self elapsedTime];
     NSTimeInterval remainingTimeInterval = self.countdownInterval - elapsedTimeInterval;
 

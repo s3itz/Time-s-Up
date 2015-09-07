@@ -135,20 +135,10 @@
             }
         }
     }
-//
-//    NSArray *keys = @[@"hours", @"minutes", @"seconds"];
-//    for (NSString *key in keys) {
-//        [self willChangeValueForKey:key];
-//        [self didChangeValueForKey:key];
-//    }
 
     // Emulate that we changed this
     [self willChangeValueForKey:@"valid"];
     [self didChangeValueForKey:@"valid"];
-}
-
-- (void)controlTextDidEndEditing:(NSNotification *)obj {
-    NSLog(@"%s", __func__);
 }
 
 @end
