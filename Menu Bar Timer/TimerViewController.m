@@ -14,6 +14,7 @@
 @property (nonatomic, weak) IBOutlet TimeFieldsView *timeFieldsView;
 @property (nonatomic, weak) IBOutlet NSButton *startPauseButton;
 @property (nonatomic, weak) IBOutlet NSButton *reverseButton;
+@property (nonatomic, weak) IBOutlet NSButton *stopwatchButton;
 
 @property (nonatomic, strong) NSTimer *timer;  // holds a reference to the active timer
 
@@ -50,6 +51,8 @@
 #pragma mark - IBActions
 
 - (IBAction)startPressed:(NSButton *)sender {
+    self.stopwatchButton.enabled = NO;
+
     self.startDate = [NSDate date];
 
     if (!self.timer) {
@@ -60,7 +63,7 @@
         [self.timer setFireDate:[NSDate date]];
     }
 
-    self.timeFieldsView.editable = NO;
+    self.timeFieldsView.enabled = NO;
 
     sender.title = @"Pause";
     sender.action = @selector(pausedPressed:);
@@ -87,7 +90,7 @@
 
 - (IBAction)stopwatchPressed:(NSButton *)sender {
     self.reverseButton.enabled = self.stopwatch;
-    self.timeFieldsView.editable = self.stopwatch;
+    self.timeFieldsView.enabled = self.stopwatch;
     self.stopwatch = !self.stopwatch;
 }
 
@@ -115,7 +118,8 @@
     self.timeFieldsView.hours = 0;
     self.timeFieldsView.minutes = 0;
     self.timeFieldsView.seconds = 0;
-    self.timeFieldsView.editable = YES;
+    self.timeFieldsView.enabled = YES;
+    self.stopwatchButton.enabled = YES;
 
     self.statusBarButton.title = @"00:00:00";
 

@@ -91,12 +91,12 @@
     return [NSSet setWithObjects:@"hours", @"minutes", @"seconds", nil];
 }
 
-- (void)setEditable:(BOOL)editable {
-    self.hoursTextField.editable = editable;
-    self.minutesTextField.editable = editable;
-    self.secondsTextField.editable = editable;
+- (void)setEnabled:(BOOL)enabled {
+    self.hoursTextField.enabled = enabled;
+    self.minutesTextField.enabled = enabled;
+    self.secondsTextField.enabled = enabled;
 
-    _editable = editable;
+    _enabled = enabled;
 }
 
 #pragma mark - Protocol conformance

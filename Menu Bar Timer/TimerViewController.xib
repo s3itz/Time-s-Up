@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="reverseButton" destination="1Pe-0I-UYI" id="v2E-S6-0pW"/>
                 <outlet property="startPauseButton" destination="Uoq-oK-VCA" id="8hq-n1-CKF"/>
+                <outlet property="stopwatchButton" destination="1vz-oy-fse" id="RCt-sE-B0N"/>
                 <outlet property="timeFieldsView" destination="4vD-MU-AJa" id="Z5o-mB-ZFc"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>

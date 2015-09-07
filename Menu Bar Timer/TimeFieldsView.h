@@ -18,7 +18,7 @@
 // This is useful for bindings
 @property (nonatomic, readonly, getter=isValid) BOOL valid;
 
-// Allows editable control state to be adjusted
-@property (nonatomic, getter=isEditable) BOOL editable;
+// Allows enabled control state to be adjusted
+@property (nonatomic, getter=isEnabled) BOOL enabled;
 
 @end
