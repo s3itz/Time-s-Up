@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TimerViewController">
             <connections>
+                <outlet property="reverseButton" destination="1Pe-0I-UYI" id="v2E-S6-0pW"/>
                 <outlet property="startPauseButton" destination="Uoq-oK-VCA" id="8hq-n1-CKF"/>
                 <outlet property="timeFieldsView" destination="4vD-MU-AJa" id="Z5o-mB-ZFc"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
@@ -16,9 +17,32 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="172" height="161"/>
+            <rect key="frame" x="0.0" y="0.0" width="172" height="203"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="4vD-MU-AJa" customClass="TimeFieldsView">
+                    <rect key="frame" x="20" y="141" width="132" height="42"/>
+                    <animations/>
+                </customView>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="1vz-oy-fse">
+                    <rect key="frame" x="43" y="105" width="87" height="18"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Stopwatch" bezelStyle="regularSquare" imagePosition="left" inset="2" id="r1I-9H-HXN">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="stopwatchPressed:" target="-2" id="7Fc-PK-tN4"/>
+                    </connections>
+                </button>
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="1Pe-0I-UYI">
+                    <rect key="frame" x="43" y="85" width="71" height="18"/>
+                    <animations/>
+                    <buttonCell key="cell" type="check" title="Reverse" bezelStyle="regularSquare" imagePosition="left" inset="2" id="xHj-qE-h2J">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
                 <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dxs-ce-Lx8">
                     <rect key="frame" x="20" y="46" width="132" height="21"/>
                     <subviews>
@@ -31,7 +55,7 @@
                             </buttonCell>
                             <connections>
                                 <action selector="startPressed:" target="-2" id="DQV-kP-zjE"/>
-                                <binding destination="-2" name="enabled" keyPath="self.timeFieldsView.valid" id="d1a-ox-B2n"/>
+                                <binding destination="-2" name="enabled" keyPath="self.ableToStart" id="ef5-UG-N8o"/>
                             </connections>
                         </button>
                         <button verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="xA5-vp-neu">
@@ -61,10 +85,6 @@
                         <real value="3.4028234663852886e+38"/>
                     </customSpacing>
                 </stackView>
-                <customView translatesAutoresizingMaskIntoConstraints="NO" id="4vD-MU-AJa" customClass="TimeFieldsView">
-                    <rect key="frame" x="20" y="75" width="132" height="66"/>
-                    <animations/>
-                </customView>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U9U-mD-QBg">
                     <rect key="frame" x="66" y="7" width="40" height="19"/>
                     <animations/>
@@ -81,15 +101,20 @@
                 <constraint firstItem="4vD-MU-AJa" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="42i-u7-iAP"/>
                 <constraint firstItem="U9U-mD-QBg" firstAttribute="top" secondItem="Dxs-ce-Lx8" secondAttribute="bottom" constant="20" id="4cF-kg-j6b"/>
                 <constraint firstAttribute="trailing" secondItem="4vD-MU-AJa" secondAttribute="trailing" constant="20" id="4yJ-xH-2Jl"/>
-                <constraint firstItem="Dxs-ce-Lx8" firstAttribute="top" secondItem="4vD-MU-AJa" secondAttribute="bottom" constant="8" id="OvK-De-Wh0"/>
+                <constraint firstItem="Dxs-ce-Lx8" firstAttribute="top" secondItem="1Pe-0I-UYI" secondAttribute="bottom" constant="20" id="5K4-q1-vKn"/>
+                <constraint firstItem="1Pe-0I-UYI" firstAttribute="top" secondItem="1vz-oy-fse" secondAttribute="bottom" constant="6" id="DJR-os-Sxf"/>
+                <constraint firstItem="1Pe-0I-UYI" firstAttribute="leading" secondItem="1vz-oy-fse" secondAttribute="leading" id="T3t-RS-tyg"/>
                 <constraint firstItem="U9U-mD-QBg" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Tg7-nm-SJf"/>
                 <constraint firstAttribute="bottom" secondItem="U9U-mD-QBg" secondAttribute="bottom" constant="8" id="UbS-JG-FWH"/>
                 <constraint firstItem="4vD-MU-AJa" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" id="VWZ-RK-Scl"/>
+                <constraint firstItem="1vz-oy-fse" firstAttribute="centerX" secondItem="4vD-MU-AJa" secondAttribute="centerX" id="YA4-sl-raC"/>
                 <constraint firstItem="Dxs-ce-Lx8" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="hOn-SO-m8J"/>
+                <constraint firstItem="1vz-oy-fse" firstAttribute="top" secondItem="4vD-MU-AJa" secondAttribute="bottom" constant="20" id="kZv-9X-2fo"/>
                 <constraint firstAttribute="trailing" secondItem="Dxs-ce-Lx8" secondAttribute="trailing" constant="20" symbolic="YES" id="oAv-uM-NrU"/>
+                <constraint firstItem="1vz-oy-fse" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="45" id="uHi-kd-x5h"/>
             </constraints>
             <animations/>
-            <point key="canvasLocation" x="258" y="345.5"/>
+            <point key="canvasLocation" x="258" y="366.5"/>
         </customView>
         <userDefaultsController representsSharedInstance="YES" id="PLc-nh-eJ9"/>
     </objects>

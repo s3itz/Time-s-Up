@@ -13,6 +13,7 @@
 
 @property (nonatomic, weak) IBOutlet TimeFieldsView *timeFieldsView;
 @property (nonatomic, weak) IBOutlet NSButton *startPauseButton;
+@property (nonatomic, weak) IBOutlet NSButton *reverseButton;
 
 @property (nonatomic, strong) NSTimer *countdownTimer;
 @property (nonatomic, copy) NSDate *countdownStartTime;
@@ -20,6 +21,7 @@
 @property (nonatomic) BOOL paused; // TODO: we'll implement pause feature by checking this state
 
 @property (nonatomic, readonly, getter=isAbleToStart) BOOL ableToStart;
+@property (nonatomic, getter=isStopwatch) BOOL stopwatch;
 
 @end
 
@@ -30,6 +32,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
+}
+
+#pragma mark - Custom Accessors
+
+- (BOOL)isAbleToStart {
+    return self.timeFieldsView.valid || self.stopwatch;
+}
+
++ (NSSet *)keyPathsForValuesAffectingAbleToStart {
+    return [NSSet setWithObjects:@"timeFieldsView.valid", @"stopwatch", nil];
 }
 
 #pragma mark - IBActions
@@ -45,7 +57,7 @@
         self.countdownInterval = hours * 3600 + minutes * 60 + seconds;
 
         NSTimer *timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
-    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+        [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
 
         self.countdownTimer = timer;
 
@@ -75,6 +87,12 @@
 
 - (IBAction)pressedQuit:(NSButton *)sender {
     [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0];
+}
+
+- (IBAction)stopwatchPressed:(NSButton *)sender {
+    self.reverseButton.enabled = self.stopwatch;
+    self.timeFieldsView.editable = self.stopwatch;
+    self.stopwatch = !self.stopwatch;
 }
 
 #pragma mark - NSTimer helpers
