@@ -10,4 +10,6 @@
 
 @interface TimerViewController : NSViewController
 
+@property (nonatomic, weak) NSStatusBarButton *statusBarButton;
+
 @end

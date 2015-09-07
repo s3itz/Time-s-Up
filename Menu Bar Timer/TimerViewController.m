@@ -17,7 +17,9 @@
 @property (nonatomic, readonly, getter=isAbleToStart) BOOL ableToStart;
 
 @property (nonatomic, strong) NSTimer *countdownTimer;
-@property (nonatomic) NSTimeInterval remainingTicks;
+@property (nonatomic, copy) NSDate *countdownStartTime;
+@property (nonatomic) NSTimeInterval countdownInterval;
+@property (nonatomic) BOOL paused; // TODO: we'll implement pause feature by checking this state
 
 @end
 
@@ -35,25 +37,107 @@
 - (BOOL)isAbleToStart {
     return ((self.hours && self.hours.integerValue > 0)
             || (self.minutes && self.minutes.integerValue > 0)
-            || (self.seconds && self.seconds.integerValue > 0));
+            || (self.seconds && self.seconds.integerValue > 0)
+            || (self.countdownTimer != nil));
+}
+
+- (void)setHours:(NSNumber *)hours {
+    [self willChangeValueForKey:@"hours"];
+    _hours = hours;
+    [self didChangeValueForKey:@"hours"];
+}
+
+- (void)setMinutes:(NSNumber *)minutes {
+    [self willChangeValueForKey:@"minutes"];
+     _minutes = minutes;
+     [self didChangeValueForKey:@"minutes"];
+}
+
+- (void)setSeconds:(NSNumber *)seconds {
+    [self willChangeValueForKey:@"seconds"];
+    _seconds = seconds;
+    [self didChangeValueForKey:@"seconds"];
+}
+
+- (void)setCountdownTimer:(NSTimer *)countdownTimer {
+    [self willChangeValueForKey:@"countdownTimer"];
+    _countdownTimer = countdownTimer;
+    [self didChangeValueForKey:@"countdownTimer"];
 }
 
 #pragma mark - IBActions
 
 - (IBAction)startPressed:(NSButton *)sender {
-    NSLog(@"%s", __func__);
+    self.countdownStartTime = [NSDate date];
+
+    if (!self.countdownTimer) {
+        NSInteger hours = self.hours ? self.hours.integerValue : 0;
+        NSInteger minutes = self.minutes ? self.minutes.integerValue : 0;
+        NSInteger seconds = self.seconds ? self.seconds.integerValue : 0;
+        self.countdownInterval = hours * 3600 + minutes * 60 + seconds;
+
+        NSTimer *timer = [NSTimer timerWithTimeInterval:0.1 target:self selector:@selector(updateTime:) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+
+        self.countdownTimer = timer;
+
+        self.statusBarButton.title = [self stringFromTimeInterval:self.countdownInterval];
+    } else {
+        [self.countdownTimer setFireDate:[NSDate date]];
+    }
+
     sender.title = @"Pause";
     sender.action = @selector(pausedPressed:);
 }
 
 - (IBAction)pausedPressed:(NSButton *)sender {
-    NSLog(@"%s", __func__);
+    [self.countdownTimer setFireDate:[NSDate distantFuture]];
+    self.countdownInterval -= [self elapsedTime];
+
     sender.title = @"Start";
     sender.action = @selector(startPressed:);
 }
 
 - (IBAction)resetPressed:(NSButton* )sender {
+    [self resetTimer];
+
+    // TODO: reset views
+}
+
+#pragma mark - NSTimer helpers
+
+- (void)resetTimer {
+    if (self.countdownTimer) {
+        [self.countdownTimer invalidate];
+        self.countdownTimer = nil;
+    }
+    self.hours = self.minutes = self.seconds = nil;
+}
+
+- (NSString *)stringFromTimeInterval:(NSTimeInterval)interval {
+    NSInteger ti = round(interval);
+    NSInteger seconds = ti % 60;
+    NSInteger minutes = (ti / 60) % 60;
+    NSInteger hours = ti / 3600;
+
+    return [NSString stringWithFormat:@"%02ld:%02ld:%02ld", hours, minutes, seconds];
+}
+
+- (NSTimeInterval)elapsedTime {
+    return [[NSDate date] timeIntervalSinceDate:self.countdownStartTime];
+}
+
+- (void)updateTime:(NSTimer *)timer {
     NSLog(@"%s", __func__);
+
+    NSTimeInterval elapsedTimeInterval = [self elapsedTime];
+    NSTimeInterval remainingTimeInterval = self.countdownInterval - elapsedTimeInterval;
+
+    if (remainingTimeInterval <= 0) {
+        [self resetTimer];
+    }
+
+    self.statusBarButton.title = [self stringFromTimeInterval:remainingTimeInterval];
 }
 
 #pragma mark - Protocol conformance

@@ -23,11 +23,13 @@
     NSStatusItem* statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusItem.button setTitle:@"00:00:00"];
     statusItem.button.action = @selector(togglePopover:);
-
     self.statusItem = statusItem;
 
+    TimerViewController *vc = [[TimerViewController alloc] initWithNibName:@"TimerViewController" bundle:nil];
+    vc.statusBarButton = statusItem.button;
+
     NSPopover *popover = [[NSPopover alloc] init];
-    popover.contentViewController = [[TimerViewController alloc] initWithNibName:@"TimerViewController" bundle:nil];
+    popover.contentViewController = vc;
     self.popover = popover;
 }
 
