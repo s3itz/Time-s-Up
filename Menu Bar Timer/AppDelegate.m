@@ -46,4 +46,10 @@
     // Insert code here to tear down your application
 }
 
+- (void)applicationDidResignActive:(NSNotification *)notification {
+    if (self.popover.isShown) {
+        [self.popover performClose:self];
+    }
+}
+
 @end
