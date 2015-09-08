@@ -22,8 +22,6 @@
 @property (nonatomic) NSTimeInterval interval;          // stored the desired time for countdowns
 @property (nonatomic) NSTimeInterval previouslyElapsed; // stores time between pauses
 
-@property (nonatomic) BOOL paused; // TODO: we'll implement pause feature by checking this state
-
 @property (nonatomic, readonly, getter=isAbleToStart) BOOL ableToStart;
 @property (nonatomic, getter=isStopwatch) BOOL stopwatch;
 
@@ -59,7 +57,6 @@
         [self getDesiredInterval];
         [self createTimer];
     } else {
-        self.paused = NO;
         [self.timer setFireDate:[NSDate date]];
     }
 
@@ -70,8 +67,6 @@
 }
 
 - (void)pausedPressed:(NSButton *)sender {
-    self.paused = YES;
-
     self.previouslyElapsed += [[NSDate date] timeIntervalSinceDate:self.startDate];
     [self.timer setFireDate:[NSDate distantFuture]];
 
