@@ -134,7 +134,7 @@
         self.statusBarButton.title = [self stringFromTimeInterval:self.interval - elapsedTime];
     }
 
-    if (self.interval - elapsedTime <= 0) {
+    if (!self.stopwatch && self.interval - elapsedTime <= 0) {
         [self resetTimer];
         [self resetViews];
         [self displayNotification];
