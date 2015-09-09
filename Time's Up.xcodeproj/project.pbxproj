@@ -1,0 +1,297 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF36A06D1B9D393D00235AE5 /* TimeFieldsView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF36A06C1B9D393D00235AE5 /* TimeFieldsView.m */; settings = {ASSET_TAGS = (); }; };
+		CF36A06F1B9D55E200235AE5 /* TimeFieldsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF36A06E1B9D55E200235AE5 /* TimeFieldsView.xib */; settings = {ASSET_TAGS = (); }; };
+		CF70B00C1B9CE4FC0061BF86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF70B00B1B9CE4FC0061BF86 /* AppDelegate.m */; };
+		CF70B00F1B9CE4FC0061BF86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF70B00E1B9CE4FC0061BF86 /* main.m */; };
+		CF70B0111B9CE4FC0061BF86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF70B0101B9CE4FC0061BF86 /* Assets.xcassets */; };
+		CF70B01E1B9CE9090061BF86 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF70B01C1B9CE9090061BF86 /* TimerViewController.m */; settings = {ASSET_TAGS = (); }; };
+		CF70B01F1B9CE9090061BF86 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF70B01D1B9CE9090061BF86 /* TimerViewController.xib */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CF36A06B1B9D393D00235AE5 /* TimeFieldsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeFieldsView.h; sourceTree = "<group>"; };
+		CF36A06C1B9D393D00235AE5 /* TimeFieldsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeFieldsView.m; sourceTree = "<group>"; };
+		CF36A06E1B9D55E200235AE5 /* TimeFieldsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimeFieldsView.xib; sourceTree = "<group>"; };
+		CF70B0071B9CE4FC0061BF86 /* Time's Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time's Up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF70B00A1B9CE4FC0061BF86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CF70B00B1B9CE4FC0061BF86 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CF70B00E1B9CE4FC0061BF86 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF70B0101B9CE4FC0061BF86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF70B0151B9CE4FC0061BF86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF70B01B1B9CE9090061BF86 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
+		CF70B01C1B9CE9090061BF86 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
+		CF70B01D1B9CE9090061BF86 /* TimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF70B0041B9CE4FC0061BF86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF70AFFE1B9CE4FC0061BF86 = {
+			isa = PBXGroup;
+			children = (
+				CF70B0091B9CE4FC0061BF86 /* Time's Up */,
+				CF70B0081B9CE4FC0061BF86 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF70B0081B9CE4FC0061BF86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF70B0071B9CE4FC0061BF86 /* Time's Up.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF70B0091B9CE4FC0061BF86 /* Time's Up */ = {
+			isa = PBXGroup;
+			children = (
+				CF70B00A1B9CE4FC0061BF86 /* AppDelegate.h */,
+				CF70B00B1B9CE4FC0061BF86 /* AppDelegate.m */,
+				CF70B00D1B9CE4FC0061BF86 /* Supporting Files */,
+				CF70B01B1B9CE9090061BF86 /* TimerViewController.h */,
+				CF70B01C1B9CE9090061BF86 /* TimerViewController.m */,
+				CF70B01D1B9CE9090061BF86 /* TimerViewController.xib */,
+				CF36A06B1B9D393D00235AE5 /* TimeFieldsView.h */,
+				CF36A06C1B9D393D00235AE5 /* TimeFieldsView.m */,
+				CF36A06E1B9D55E200235AE5 /* TimeFieldsView.xib */,
+			);
+			path = "Time's Up";
+			sourceTree = "<group>";
+		};
+		CF70B00D1B9CE4FC0061BF86 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF70B0101B9CE4FC0061BF86 /* Assets.xcassets */,
+				CF70B0151B9CE4FC0061BF86 /* Info.plist */,
+				CF70B00E1B9CE4FC0061BF86 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF70B0061B9CE4FC0061BF86 /* Time's Up */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF70B0181B9CE4FC0061BF86 /* Build configuration list for PBXNativeTarget "Time's Up" */;
+			buildPhases = (
+				CF70B0031B9CE4FC0061BF86 /* Sources */,
+				CF70B0041B9CE4FC0061BF86 /* Frameworks */,
+				CF70B0051B9CE4FC0061BF86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Time's Up";
+			productName = "Menu Bar Timer";
+			productReference = CF70B0071B9CE4FC0061BF86 /* Time's Up.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF70AFFF1B9CE4FC0061BF86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Daniel Seitz";
+				TargetAttributes = {
+					CF70B0061B9CE4FC0061BF86 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = B2FA87273E;
+					};
+				};
+			};
+			buildConfigurationList = CF70B0021B9CE4FC0061BF86 /* Build configuration list for PBXProject "Time's Up" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF70AFFE1B9CE4FC0061BF86;
+			productRefGroup = CF70B0081B9CE4FC0061BF86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF70B0061B9CE4FC0061BF86 /* Time's Up */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF70B0051B9CE4FC0061BF86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF36A06F1B9D55E200235AE5 /* TimeFieldsView.xib in Resources */,
+				CF70B01F1B9CE9090061BF86 /* TimerViewController.xib in Resources */,
+				CF70B0111B9CE4FC0061BF86 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF70B0031B9CE4FC0061BF86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF36A06D1B9D393D00235AE5 /* TimeFieldsView.m in Sources */,
+				CF70B01E1B9CE9090061BF86 /* TimerViewController.m in Sources */,
+				CF70B00F1B9CE4FC0061BF86 /* main.m in Sources */,
+				CF70B00C1B9CE4FC0061BF86 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CF70B0161B9CE4FC0061BF86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CF70B0171B9CE4FC0061BF86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CF70B0191B9CE4FC0061BF86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Time's Up/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.s3itz.Times-Up";
+				PRODUCT_NAME = "Time's Up";
+			};
+			name = Debug;
+		};
+		CF70B01A1B9CE4FC0061BF86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Time's Up/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.s3itz.Times-Up";
+				PRODUCT_NAME = "Time's Up";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF70B0021B9CE4FC0061BF86 /* Build configuration list for PBXProject "Time's Up" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF70B0161B9CE4FC0061BF86 /* Debug */,
+				CF70B0171B9CE4FC0061BF86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF70B0181B9CE4FC0061BF86 /* Build configuration list for PBXNativeTarget "Time's Up" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF70B0191B9CE4FC0061BF86 /* Debug */,
+				CF70B01A1B9CE4FC0061BF86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF70AFFF1B9CE4FC0061BF86 /* Project object */;
+}
