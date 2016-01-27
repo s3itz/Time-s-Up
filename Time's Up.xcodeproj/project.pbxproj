@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF36A06D1B9D393D00235AE5 /* TimeFieldsView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF36A06C1B9D393D00235AE5 /* TimeFieldsView.m */; settings = {ASSET_TAGS = (); }; };
-		CF36A06F1B9D55E200235AE5 /* TimeFieldsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF36A06E1B9D55E200235AE5 /* TimeFieldsView.xib */; settings = {ASSET_TAGS = (); }; };
+		CF36A06D1B9D393D00235AE5 /* TimeFieldsView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF36A06C1B9D393D00235AE5 /* TimeFieldsView.m */; };
+		CF36A06F1B9D55E200235AE5 /* TimeFieldsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF36A06E1B9D55E200235AE5 /* TimeFieldsView.xib */; };
 		CF70B00C1B9CE4FC0061BF86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF70B00B1B9CE4FC0061BF86 /* AppDelegate.m */; };
 		CF70B00F1B9CE4FC0061BF86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF70B00E1B9CE4FC0061BF86 /* main.m */; };
 		CF70B0111B9CE4FC0061BF86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF70B0101B9CE4FC0061BF86 /* Assets.xcassets */; };
-		CF70B01E1B9CE9090061BF86 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF70B01C1B9CE9090061BF86 /* TimerViewController.m */; settings = {ASSET_TAGS = (); }; };
-		CF70B01F1B9CE9090061BF86 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF70B01D1B9CE9090061BF86 /* TimerViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		CF70B01E1B9CE9090061BF86 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF70B01C1B9CE9090061BF86 /* TimerViewController.m */; };
+		CF70B01F1B9CE9090061BF86 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF70B01D1B9CE9090061BF86 /* TimerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */

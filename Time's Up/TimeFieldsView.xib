@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A279b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8187.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <objects>
@@ -28,7 +28,6 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="28" id="0BJ-U7-5lW"/>
                             </constraints>
-                            <animations/>
                             <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="00" id="ir0-Hh-hlE">
                                 <font key="font" metaFont="system"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -40,7 +39,6 @@
                         </textField>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1tH-w9-LYY">
                             <rect key="frame" x="26" y="5" width="8" height="17"/>
-                            <animations/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=":" id="OET-z5-OG3">
                                 <font key="font" metaFont="system"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -52,7 +50,6 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="28" id="diF-5r-k8y"/>
                             </constraints>
-                            <animations/>
                             <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="00" id="G4w-cf-dFk">
                                 <font key="font" metaFont="system"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -64,7 +61,6 @@
                         </textField>
                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Rc-6W-e93">
                             <rect key="frame" x="58" y="5" width="8" height="17"/>
-                            <animations/>
                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title=":" id="zs8-HE-d9S">
                                 <font key="font" metaFont="system"/>
                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -76,7 +72,6 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="28" id="uo8-j0-fZe"/>
                             </constraints>
-                            <animations/>
                             <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" continuous="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="center" placeholderString="00" id="4Vh-vZ-rz1">
                                 <font key="font" metaFont="system"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -87,7 +82,6 @@
                             </connections>
                         </textField>
                     </subviews>
-                    <animations/>
                     <visibilityPriorities>
                         <integer value="1000"/>
                         <integer value="1000"/>
@@ -108,7 +102,6 @@
                 <constraint firstItem="ioF-nw-Gi5" firstAttribute="top" secondItem="eLv-QS-XAt" secondAttribute="top" constant="20" id="Gqu-ul-gjd"/>
                 <constraint firstItem="ioF-nw-Gi5" firstAttribute="leading" secondItem="eLv-QS-XAt" secondAttribute="leading" constant="20" symbolic="YES" id="Gst-3e-0gO"/>
             </constraints>
-            <animations/>
             <point key="canvasLocation" x="308" y="184"/>
         </customView>
     </objects>

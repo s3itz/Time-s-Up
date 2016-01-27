@@ -102,7 +102,7 @@
 #pragma mark - Protocol conformance
 #pragma mark - NSTextFieldDelegate
 
-- (void)controlTextDidChange:(NSNotification *)obj {
+- (void):(NSNotification *)obj {
     static NSCharacterSet *numericSet = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
